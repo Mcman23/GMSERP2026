@@ -23,6 +23,17 @@ export const AuthProvider = ({ children }) => {
       setIsLoadingPublicSettings(true);
       setAuthError(null);
       
+      // Lokal dev mühit / Vercel bypass
+      if (typeof createAxiosClient === 'undefined') {
+        console.info('[Dev Mode] base44 plugin yoxdur — auth bypass aktiv');
+        setAppPublicSettings({ id: 'local', public_settings: {} });
+        setIsLoadingPublicSettings(false);
+        setUser({ id: 'local-user', email: 'dev@local.az', full_name: 'Demo Admin', role: 'admin' });
+        setIsAuthenticated(true);
+        setIsLoadingAuth(false);
+        return;
+      }
+
       // First, check app public settings (with token if available)
       // This will tell us if auth is required, user not registered, etc.
       const appClient = createAxiosClient({
