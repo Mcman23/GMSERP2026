@@ -1,0 +1,62 @@
+{
+  "name": "HesabPlani",
+  "type": "object",
+  "properties": {
+    "hesab_kodu": {
+      "type": "string",
+      "title": "Hesab kodu"
+    },
+    "hesab_adi": {
+      "type": "string",
+      "title": "Hesab ad\u0131"
+    },
+    "sinif": {
+      "type": "string",
+      "title": "Sinif",
+      "enum": [
+        "1 - Aktivl\u0259r",
+        "2 - \u00d6hd\u0259likl\u0259r",
+        "3 - Kapital",
+        "4 - G\u0259lirl\u0259r",
+        "5 - X\u0259rcl\u0259r"
+      ]
+    },
+    "tip": {
+      "type": "string",
+      "title": "Tip",
+      "enum": [
+        "Ana hesab",
+        "Alt hesab"
+      ]
+    },
+    "ana_hesab_kodu": {
+      "type": "string",
+      "title": "Ana hesab kodu"
+    },
+    "valyuta": {
+      "type": "string",
+      "title": "Valyuta",
+      "default": "AZN"
+    },
+    "qalan": {
+      "type": "number",
+      "title": "Cari qal\u0131q",
+      "default": 0
+    },
+    "aktiv": {
+      "type": "boolean",
+      "title": "Aktivdir",
+      "default": true
+    },
+    "aciklama": {
+      "type": "string",
+      "title": "A\u00e7\u0131qlama"
+    }
+  },
+  "required": [
+    "hesab_kodu",
+    "hesab_adi",
+    "sinif",
+    "tip"
+  ]
+}

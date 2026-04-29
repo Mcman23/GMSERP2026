@@ -1,0 +1,89 @@
+{
+  "name": "Bildiris",
+  "properties": {
+    "baglandi": {
+      "default": false,
+      "title": "Ba\u011fland\u0131",
+      "type": "boolean"
+    },
+    "baglanis_tarixi": {
+      "format": "date-time",
+      "title": "Ba\u011flan\u0131\u015f tarixi",
+      "type": "string"
+    },
+    "istifadeci_id": {
+      "title": "\u0130stifad\u0259\u00e7i ID",
+      "type": "string"
+    },
+    "istinad_id": {
+      "title": "\u0130stinad ID",
+      "type": "string"
+    },
+    "istinad_tipi": {
+      "enum": [
+        "Sifari\u015f",
+        "Kassa",
+        "Stok",
+        "Maa\u015f",
+        "M\u0259zuniyy\u0259t",
+        "Sikayet",
+        "Faktura",
+        "Avadanl\u0131q"
+      ],
+      "title": "\u0130stinad tipi",
+      "type": "string"
+    },
+    "mesaj": {
+      "title": "M\u0259saj",
+      "type": "string"
+    },
+    "oxundu": {
+      "default": false,
+      "title": "Oxundu",
+      "type": "boolean"
+    },
+    "prioritet": {
+      "default": "Normal",
+      "enum": [
+        "Normal",
+        "Vacib",
+        "Kritik"
+      ],
+      "title": "Prioritet",
+      "type": "string"
+    },
+    "ses_verildi": {
+      "default": false,
+      "title": "S\u0259s verildi",
+      "type": "boolean"
+    },
+    "tarix": {
+      "format": "date-time",
+      "title": "Tarix",
+      "type": "string"
+    },
+    "tip": {
+      "enum": [
+        "Yeni sifari\u015f",
+        "Stok x\u0259b\u0259rdarl\u0131\u011f\u0131",
+        "\u00d6d\u0259ni\u015f",
+        "M\u0259zuniyy\u0259t sorqsu",
+        "Sikayet",
+        "Avadanl\u0131q bax\u0131m",
+        "Sistem"
+      ],
+      "title": "Bildiri\u015f tipi",
+      "type": "string"
+    },
+    "unvan": {
+      "title": "Unvan / Link",
+      "type": "string"
+    }
+  },
+  "required": [
+    "mesaj",
+    "tip",
+    "tarix"
+  ],
+  "type": "object"
+}

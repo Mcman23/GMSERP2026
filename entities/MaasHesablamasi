@@ -1,0 +1,177 @@
+{
+  "name": "MaasHesablamasi",
+  "properties": {
+    "ay": {
+      "title": "Ay",
+      "type": "string"
+    },
+    "bank_odenis": {
+      "default": 0,
+      "title": "Kart ile \u00f6d\u0259ni\u015f (AZN)",
+      "type": "number"
+    },
+    "bonus": {
+      "default": 0,
+      "title": "Bonus (AZN)",
+      "type": "number"
+    },
+    "cerime": {
+      "default": 0,
+      "title": "C\u0259rim\u0259 (AZN)",
+      "type": "number"
+    },
+    "dsmf_isci_faizi": {
+      "default": 3,
+      "title": "DSMF \u0130\u015f\u00e7i faizi (%)",
+      "type": "number"
+    },
+    "dsmf_isci_meblegi": {
+      "default": 0,
+      "title": "DSMF \u0130\u015f\u00e7i tutulmas\u0131 (AZN)",
+      "type": "number"
+    },
+    "dsmf_isverenin_faizi": {
+      "default": 22,
+      "title": "DSMF \u0130\u015fver\u0259n faizi (%)",
+      "type": "number"
+    },
+    "dsmf_isverenin_meblegi": {
+      "default": 0,
+      "title": "DSMF \u0130\u015fver\u0259n \u00f6hd\u0259liyi (AZN)",
+      "type": "number"
+    },
+    "elden_odenis": {
+      "default": 0,
+      "title": "Naqd \u00f6d\u0259ni\u015f (AZN)",
+      "type": "number"
+    },
+    "gelirvergisi": {
+      "default": 0,
+      "title": "G\u0259lir vergisi (AZN)",
+      "type": "number"
+    },
+    "gelirvergisi_faizi": {
+      "title": "G\u0259lir vergisi faizi (%)",
+      "type": "string"
+    },
+    "isci_adi": {
+      "title": "\u0130\u015f\u00e7i ad\u0131",
+      "type": "string"
+    },
+    "isci_id": {
+      "title": "\u0130\u015f\u00e7i ID",
+      "type": "string"
+    },
+    "iscisigortasi_isci": {
+      "default": 0.5,
+      "title": "\u0130\u015fsizlik Sigortas\u0131 \u0130\u015f\u00e7i (%)",
+      "type": "number"
+    },
+    "iscisigortasi_isci_meblegi": {
+      "default": 0,
+      "title": "\u0130\u015fsizlik Sigortas\u0131 \u0130\u015f\u00e7i (AZN)",
+      "type": "number"
+    },
+    "iscisigortasi_iverenin": {
+      "default": 0.5,
+      "title": "\u0130\u015fsizlik Sigortas\u0131 \u0130\u015fver\u0259n (%)",
+      "type": "number"
+    },
+    "iscisigortasi_iverenin_meblegi": {
+      "default": 0,
+      "title": "\u0130\u015fsizlik Sigortas\u0131 \u0130\u015fver\u0259n (AZN)",
+      "type": "number"
+    },
+    "ixtisarici_maas": {
+      "default": 0,
+      "title": "Xal\u0131s maa\u015f (\u018fl\u0259 al\u0131nana) (AZN)",
+      "type": "number"
+    },
+    "mezuniyyet_gunu": {
+      "default": 0,
+      "title": "M\u0259zuniyy\u0259t g\u00fcn\u00fc",
+      "type": "number"
+    },
+    "nagilmaas": {
+      "default": 0,
+      "title": "Nominal maa\u015f (AZN)",
+      "type": "number"
+    },
+    "odenis_statusu": {
+      "default": "\u00d6d\u0259nilm\u0259yib",
+      "enum": [
+        "\u00d6d\u0259nilm\u0259yib",
+        "Qism\u0259n \u00f6d\u0259nilib",
+        "\u00d6d\u0259nilib"
+      ],
+      "title": "\u00d6d\u0259ni\u015f statusu",
+      "type": "string"
+    },
+    "overtaym_saati": {
+      "default": 0,
+      "title": "Overtaym saatlar\u0131",
+      "type": "number"
+    },
+    "overtaym_ucret": {
+      "default": 0,
+      "title": "Overtaym \u00fccr\u0259ti (AZN)",
+      "type": "number"
+    },
+    "qeyri_is_gunu": {
+      "default": 0,
+      "title": "Q\u0259yri-i\u015f g\u00fcnl\u0259ri",
+      "type": "number"
+    },
+    "sebet": {
+      "default": 0,
+      "title": "S\u0259b\u0259t maa\u015f\u0131 (AZN)",
+      "type": "number"
+    },
+    "status": {
+      "default": "Haz\u0131rlan\u0131b",
+      "enum": [
+        "Haz\u0131rlan\u0131b",
+        "T\u0259sdiql\u0259ndi",
+        "\u00d6d\u0259nildi"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "tibbiSigortaIsci": {
+      "default": 2,
+      "title": "\u0130cb. Tibbi Siqorta \u0130\u015f\u00e7i (%)",
+      "type": "number"
+    },
+    "tibbiSigortaIsciMeblegi": {
+      "default": 0,
+      "title": "\u0130cb. Tibbi Siqorta \u0130\u015f\u00e7i (AZN)",
+      "type": "number"
+    },
+    "tibbiSigortaIveren": {
+      "default": 2,
+      "title": "\u0130cb. Tibbi Siqorta \u0130\u015fver\u0259n (%)",
+      "type": "number"
+    },
+    "tibbiSigortaIverenMeblegi": {
+      "default": 0,
+      "title": "\u0130cb. Tibbi Siqorta \u0130\u015fver\u0259n (AZN)",
+      "type": "number"
+    },
+    "umumi_isverenin_xerci": {
+      "default": 0,
+      "title": "\u0130\u015fver\u0259nin \u00fcmumi x\u0259rci (AZN)",
+      "type": "number"
+    },
+    "il": {
+      "title": "\u0130l",
+      "type": "string"
+    }
+  },
+  "required": [
+    "isci_id",
+    "ay",
+    "il",
+    "nagilmaas"
+  ],
+  "type": "object"
+}

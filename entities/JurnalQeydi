@@ -1,0 +1,79 @@
+{
+  "name": "JurnalQeydi",
+  "properties": {
+    "aciklama": {
+      "title": "A\u00e7\u0131qlama",
+      "type": "string"
+    },
+    "debet_hesab": {
+      "title": "Debet hesab",
+      "type": "string"
+    },
+    "debet_mebleg": {
+      "default": 0,
+      "title": "Debet m\u0259bl\u0259\u011fi",
+      "type": "number"
+    },
+    "edv_mebleg": {
+      "default": 0,
+      "title": "\u018fDV m\u0259bl\u0259\u011fi",
+      "type": "number"
+    },
+    "istinad_id": {
+      "title": "\u0130stinad sifari\u015f/faktura ID",
+      "type": "string"
+    },
+    "istinad_tipi": {
+      "enum": [
+        "Faktura",
+        "Sifari\u015f",
+        "Kassa",
+        "Maa\u015f",
+        "Satinalma",
+        "Manual"
+      ],
+      "title": "\u0130stinad tipi",
+      "type": "string"
+    },
+    "jurnal_no": {
+      "title": "Jurnal n\u00f6mr\u0259si",
+      "type": "string"
+    },
+    "kredit_hesab": {
+      "title": "Kredit hesab",
+      "type": "string"
+    },
+    "kredit_mebleg": {
+      "default": 0,
+      "title": "Kredit m\u0259bl\u0259\u011fi",
+      "type": "number"
+    },
+    "status": {
+      "default": "G\u00f6zl\u0259yir",
+      "enum": [
+        "G\u00f6zl\u0259yir",
+        "T\u0259sdiql\u0259ndi",
+        "L\u0259\u011fv edildi"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "tarix": {
+      "format": "date",
+      "title": "Tarix",
+      "type": "string"
+    },
+    "tesdiq_eden": {
+      "title": "T\u0259sdiq ed\u0259n",
+      "type": "string"
+    }
+  },
+  "required": [
+    "jurnal_no",
+    "tarix",
+    "debet_hesab",
+    "kredit_hesab",
+    "debet_mebleg"
+  ],
+  "type": "object"
+}
