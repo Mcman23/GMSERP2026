@@ -23,27 +23,23 @@ export const AuthProvider = ({ children }) => {
       setIsLoadingPublicSettings(true);
       setAuthError(null);
       
-      // Lokal dev mühit / Vercel bypass
+      // Supabase / Lokal Adapter yoxlaması
       if (typeof createAxiosClient === 'undefined') {
-        console.info('[Dev Mode] base44 plugin yoxdur — auth bypass aktiv');
         setAppPublicSettings({ id: 'local', public_settings: {} });
         setIsLoadingPublicSettings(false);
-        setUser({ id: 'local-user', email: 'dev@local.az', full_name: 'Demo Admin', role: 'admin' });
-        setIsAuthenticated(true);
+        
+        // Supabase-dən istifadəçini gətir
+        const user = await globalThis.__B44_DB__.auth.me();
+        if (user) {
+          setUser(user);
+          setIsAuthenticated(true);
+        } else {
+          setIsAuthenticated(false);
+        }
+        
         setIsLoadingAuth(false);
         return;
       }
-
-      // First, check app public settings (with token if available)
-      // This will tell us if auth is required, user not registered, etc.
-      const appClient = createAxiosClient({
-        baseURL: `/api/apps/public`,
-        headers: {
-          'X-App-Id': appParams.appId
-        },
-        token: appParams.token, // Include token if available
-        interceptResponses: true
-      });
       
       try {
         const publicSettings = await appClient.get(`/prod/public-settings/by-id/${appParams.appId}`);
