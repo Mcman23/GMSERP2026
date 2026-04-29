@@ -180,8 +180,13 @@
     redirectToLogin: function() {}
   };
 
+  var mockUsers = {
+    inviteUser: function() { return Promise.resolve(true); }
+  };
+
   globalThis.__B44_DB__ = {
     auth: mockAuth,
+    users: mockUsers,
     entities: entities,
     asServiceRole: { entities: entities },
     integrations: {
