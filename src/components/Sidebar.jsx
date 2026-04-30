@@ -18,16 +18,32 @@ const sections = [
     path: "/",
   },
   {
-    id: "kassa",
-    label: "Kassa və Maliyyə",
-    icon: Wallet,
-    items: [
-      { label: "Kassa Əməliyyatları", path: "/kassa", icon: Wallet },
-      { label: "Maliyyə Hesabatları", path: "/maliyye", icon: TrendingUp },
-      { label: "Qiymət Kalkulyatoru", path: "/qiymet-kalkulyatoru", icon: Calculator },
-      { label: "Qiymət Təklifləri", path: "/qiymet-teklifleri", icon: FileCheck },
-      { label: "Fakturalar", path: "/fakturalar", icon: Receipt },
-    ],
+    id: "maliyye",
+    label: "Maliyyə Hesabatları",
+    icon: TrendingUp,
+    direct: true,
+    path: "/maliyye",
+  },
+  {
+    id: "kalkulyator",
+    label: "Qiymət Kalkulyatoru",
+    icon: Calculator,
+    direct: true,
+    path: "/qiymet-kalkulyatoru",
+  },
+  {
+    id: "teklifler",
+    label: "Qiymət Təklifləri",
+    icon: FileCheck,
+    direct: true,
+    path: "/qiymet-teklifleri",
+  },
+  {
+    id: "fakturalar",
+    label: "Fakturalar",
+    icon: Receipt,
+    direct: true,
+    path: "/fakturalar",
   },
   {
     id: "satis",
@@ -67,7 +83,7 @@ const sections = [
     label: "Sənəd İdarəetməsi",
     icon: FolderOpen,
     items: [
-      { label: "Bütün Sənədlər", path: "/senedler", icon: FileText },
+      { label: "Sənədlər", path: "/senedler", icon: FileText },
     ],
   },
   {
